@@ -1,0 +1,54 @@
+JAM-src-v0.2 Changes (2000-10-21, Durin)
+----------------------------------------
+
+- Deleted some imports not needed anymore in Connection.java,
+  ConnectionServer.java and JamGUI.java (Durin)
+- Some cosmetic changes in Connection.java, ConnectionServer.java,
+  Jam.java and JamConsole.java (Durin)
+- Corrected Connection's readLine() behaviour: Only one line is
+  returned on a readLine() call. The tail of the buffer is kept within
+  Connection (Durin)
+- Inserted a wait() call into the main loop to have a fixed rate of
+  loops per second (actually 10) (Durin)
+- Inserted a validate() call into the JamGUI to make it visible after
+  creating the text area (Durin)
+- Added the GNU Public License (COPYING) and added a note on top of
+  each file (Durin)
+- Added the actor, living and player character classes (Durin)
+- Dropped the connection server's input handling (Durin)
+- Added actor, living and player character lists to world (Durin)
+- Added world actor triggering (Durin)
+- Moved the welcome message from the connection to the player
+  character (Durin)
+- Added command printing to the console to the player character
+  (Durin)
+- Connections now register themsevels at the connection server (Durin)
+- Changed the timeout for pending connection request to 1 ms (Durin)
+- Added command parsing to all actors (Durin)
+- Added echoOff() and echoOn() functions to Connection (Durin)
+- Added player logins (Durin)
+- Added a title screen (Durin)
+- Added ANSI color parsing for players (Durin)
+- Added reconnect support (Durin)
+- Added automatic disconnecting of idle players (Durin)
+- Added an action class to be parent for spells, commands and affects
+  (Durin)
+- Added a busyPulses field to actors (Durin)
+- Added player saving in XML (Durin)
+- Added quit, delete, shutdown and save commands (Durin)
+- Added qui, delet and shutdow command fakes (Durin)
+- Fixed a bug: empty input lines caused a crash (Durin)
+- Added player loading (Durin)
+
+
+JAM-src-v0.1 Changes (2000-09-11, Durin)
+----------------------------------------
+
+- JAM accepts connections at the port given as argument or at
+  the standard port (4711) if no port is given (Durin)
+- A welcome message is written to new connections (Durin)
+- Input from connections is written to the text console (Durin)
+- If a GUI is running, the JamGUI is opened at startup where
+  active connections are displayed (Durin)
+- If JAM recieves the word 'shutdown' from a connection, it shuts
+  down (Durin)
